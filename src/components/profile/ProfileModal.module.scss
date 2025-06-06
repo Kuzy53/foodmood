@@ -1,0 +1,108 @@
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    padding: 8px;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    @media (max-width: 768px) {
+        align-items: end;
+    }
+}
+
+.modalContent {
+    background-color: white;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 660px;
+    max-height: 90vh;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    @media (max-width: 768px) {
+        height: 100%;
+    }
+}
+
+.modalHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 24px;
+    @media (max-width: 768px) {
+        padding: 12px 24px;
+    }
+}
+
+.modalTitle {
+    font-size: 22px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.closeButton {
+    background: #F1F3F5;
+    border: none;
+    font-size: 24px;
+    line-height: 1;
+    cursor: pointer;
+    padding: 0;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;
+    &:hover {
+        background: #E9ECEF;
+    }
+}
+
+.tabsContainer {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.tabsList {
+    display: flex;
+    padding: 12px 24px;
+    border-bottom: 1px #E9ECEF solid;
+}
+
+.tabButton {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 400;
+    transition: all 0.2s;
+    position: relative;
+    &:hover {
+        color: #212529;
+        background-color: rgba(0, 0, 0, 0.05);
+    }
+    &.active {
+        &:after {
+            content: '';
+            display: block;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background-color: #82C91E;
+        }
+    }
+}
+
+.tabContent {
+    flex: 1;
+}

@@ -1,0 +1,320 @@
+.container {
+    max-width: 1230px;
+    margin: 0 auto;
+    padding-bottom: 20px;
+  }
+
+  .invalid {
+    .input {
+      border: 1px solid red!important;
+    }
+  }
+  .errorText {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+  }
+
+  
+  .header {
+    padding: 38px 0;
+    border-bottom: 1px solid #000;
+    text-align: center;
+  
+    .h1 {
+      font-weight: 800;
+      font-size: 32px;
+    }
+  }
+  
+  .registration {
+    text-align: center;
+    padding: 70px 0 0 0;
+  
+    .title {
+      font-weight: 800;
+      font-size: 32px;
+      margin-bottom: 50px;
+    }
+  }
+  
+
+
+
+  .toggleWrapper {
+    display: inline-flex;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 46px;
+    justify-content: space-between;
+    max-width: 340px;
+    width: 100%;
+  }
+  
+  .toggleButton {
+    background: #FFF;
+    border: 1px solid #A7C944;
+    padding: 18px 20px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 18px;
+    color: #A7C944;
+    width: 100%;
+
+  
+    &.active {
+      background: #A7C944;
+      color: #fff;
+    }
+  
+    &:first-child {
+        border-bottom-left-radius: 8px;
+        border-top-left-radius: 8px;
+    }
+    &:last-child {
+        border-bottom-right-radius: 8px;
+        border-top-right-radius: 8px;
+    }
+  
+    &:disabled {
+      cursor: not-allowed;
+      opacity: 0.7;
+    }
+  }
+  
+  .form {
+    max-width: 350px;
+    margin: 0 auto;
+    text-align: left;
+  }
+  
+  .formGroup {
+    margin-bottom: 20px;
+  
+    .label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 600;
+    }
+  
+    .input {
+      width: 100%;
+      padding: 20px 10px;
+      border: 1px solid #818181;
+      border-radius: 12px;
+    }
+  }
+  
+  .phoneInputWrapper {
+    display: flex;
+  
+    .countryCode {
+      border: 1px solid #818181;
+      border-radius: 4px 0 0 4px;
+      padding: 8px;
+      background: #fff;
+      outline: none;
+    }
+  
+    .phoneInput {
+      border: 1px solid #818181;
+      border-left: none;
+      border-radius: 0 12px 12px 0;
+      padding: 20px 10px;
+      width: 100%;
+    }
+  }
+  
+  .checkboxGroup {
+    display: flex;
+    align-items: flex-start; 
+  
+    /* Если есть класс .invalid, можно красить рамку или текст */
+    &.invalid {
+      .checkboxLabel {
+       
+      }
+    }
+  
+    /* Скрываем дефолтный чекбокс */
+    input[type="checkbox"] {
+      position: absolute;
+      opacity: 0;
+      pointer-events: none;
+    }
+  
+    /* Стиль самого label */
+    .checkboxLabel {
+      display: inline-flex;
+      align-items: center;
+      cursor: pointer;
+      font-size: 14px;
+      line-height: 1.2;
+      color: #6F6F6F;
+  
+      /* Отступ между «коробочкой» и текстом */
+      gap: 8px;
+    }
+  
+    /* Нарисуем свой прямоугольник под чекбокс через .fakeCheckbox */
+    .fakeCheckbox {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      border: 2px solid #333; 
+      border-radius: 4px;       /* если нужен слегка скругленный */
+      position: relative;
+      /* если нужно подвинуть: margin-right: 8px; */
+    }
+  
+    /* Галочка внутри .fakeCheckbox через ::after */
+    .fakeCheckbox::after {
+      content: "";
+      position: absolute;
+      width: 14px;
+      height: 14px;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%) scale(0);
+      /* Можно вставить иконку галочки через background, 
+         либо нарисовать её border'ами, либо Data URL */
+      background-image: url("/public/Checkmark.svg");
+      border: #fff;
+      color: #FFF;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      transition: transform 0.2s ease;
+    }
+  
+    /* Когда чекбокс:checked, показываем галочку (scale(1)) */
+    input[type="checkbox"]:checked + .checkboxLabel .fakeCheckbox::after {
+      transform: translate(-50%, -50%) scale(1);
+    }
+    input[type="checkbox"]:checked + .checkboxLabel .fakeCheckbox {
+      border-color: #A7C944; // зелёный цвет из макета
+      background-color: #A7C944;
+    }
+  }
+  
+  
+  .submitButton {
+    background: #A7C944;
+    border: none;
+    border-radius: 15px;
+    padding: 20px 20px;
+    font-weight: 500;
+    font-size: 16px;
+    color: #fff;
+    width: 100%;
+    cursor: pointer;
+    margin-top: 40px;
+
+  
+    &:hover {
+      background: #A7C944;
+    }
+  }
+  
+  /* Стили для CodeConfirmation */
+  .confirmationContainer {
+    max-width: 350px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .confirmationText {
+    margin-bottom: 20px;
+    font-size: 16px;
+    font-weight: 600;
+  }
+  
+  .codeInputWrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .codeInput {
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    font-size: 20px;
+    border: 1px solid #818181;
+    border-radius: 6px;
+    text-transform: uppercase;
+  
+    &:focus {
+      border-color: #A7C944;
+      outline: none;
+    }
+  }
+  
+  .didntGetWrapper {
+    margin-bottom: 30px;
+  
+    .didntGet {
+      font-size: 14px;
+      color: #555;
+    }
+  }
+  
+  .confirmButton {
+    background: #A7C944;
+    border: none;
+    border-radius: 4px;
+    padding: 12px 20px;
+    font-weight: 600;
+    font-size: 16px;
+    color: #fff;
+    width: 100%;
+    cursor: pointer;
+    margin-bottom: 20px;
+  
+    &:hover {
+      background: #A7C944;
+    }
+  }
+  
+  .resendWrapper {
+    .resendDisabled {
+      background: #f5f5f5;
+      padding: 12px 20px;
+      border-radius: 4px;
+      color: #999;
+      display: inline-block;
+      width: 100%;
+      text-align: center;
+      font-weight: 600;
+    }
+  
+    .resendActive {
+      background: #f5f5f5;
+      border: none;
+      border-radius: 4px;
+      padding: 12px 20px;
+      font-weight: 600;
+      font-size: 16px;
+      color: #000;
+      width: 100%;
+      cursor: pointer;
+  
+      &:hover {
+        background: #e5e5e5;
+      }
+    }
+  }
+  
+  @media (max-width: 490px) {
+    .header {
+      border: none;
+      padding: 20px 0 30px 0;
+      h1 {
+        font-size: 24px!important;
+      }
+    }
+    .login {
+      padding: 0;
+    }
+  }

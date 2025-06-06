@@ -1,0 +1,106 @@
+.changePaymentMethod {
+    padding: 24px;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 32px;
+}
+
+.backButton {
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 100%;
+    justify-content: space-between;
+}
+
+.formWrapper {
+    display: grid;
+    gap: 10px;
+}
+
+.formGroup {
+    input {
+        padding: 0px 16px;
+        border: 1px solid #CED4DA;
+        border-radius: 8px;
+        height: 50px;
+        width: 100%;
+        font-size: 18px;
+        transition: border-color 0.2s;
+        &:focus {
+            outline: none;
+            border-color: #82C91E;
+        }
+        &:disabled {
+            background-color: #f8f9fa;
+            color: #868e96;
+        }
+    }
+}
+
+.formRow {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.formActions {
+    display: flex;
+    gap: 10px;
+    margin-top: 32px;
+}
+
+.cancelButton {
+    border-radius: 32px;
+    border: 1px solid #25262B;
+    padding: 0 26px;
+    font-size: 18px;
+    font-weight: 400;
+    color: #25262B;
+    line-height: 48px;
+    background-color: transparent;
+    cursor: pointer;
+    &:hover {
+        background-color: #6D6D6D;
+        color: white;
+    }
+}
+
+.saveButton {
+    border-radius: 32px;
+    border: 1px solid #25262B;
+    padding: 0 26px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 48px;
+    color: white;
+    background-color: #25262B;
+    cursor: pointer;
+    &:hover {
+        background-color: #6D6D6D;
+    }
+}

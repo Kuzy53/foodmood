@@ -1,0 +1,22 @@
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: left;
+    max-width: 828px;
+  
+    section {
+      margin-bottom: 40px;
+  
+      h2 {
+        font-size: 24px;
+        margin-bottom: 20px;
+      }
+    }
+  }
+  
+  @media (max-width: 1185px) {
+    .product-list {
+      max-width: none;
+    }
+  }

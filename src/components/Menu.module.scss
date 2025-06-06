@@ -1,0 +1,126 @@
+.menu {
+  width: 186px;
+  padding: 24px;
+  background-color: #fff;
+  border-radius: 24px;
+  height: calc(100vh - 200px);
+  max-height: 842px;
+  ///
+  position: fixed;
+  top: 148px;
+  ///
+  overflow-y: hidden;
+  overflow-x: scroll;
+  padding-top: 20px !important;
+  z-index: -3;
+
+  h1 {
+    padding-bottom: 30px;
+    font-size: 22px;
+    font-weight: 700;
+  }
+
+  h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    margin-left: 15px;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    // overflow-y: hidden;
+    // overflow-x: scroll;
+
+    li {
+      margin-bottom: 10px;
+      border-radius: 10px;
+
+      &:hover,
+      &.active {
+        background-color: #ececec;
+      }
+
+      a {
+        text-decoration: none;
+        color: #000;
+        font-size: 18px;
+        display: block;
+        padding: 10px 12px;
+        border-radius: 8px;
+        font-size: 14px;
+
+        // &:hover,
+        // &.active {
+        //   background-color: #ececec;
+        // }
+      }
+    }
+  }
+}
+
+@media (max-width: 1185px) {
+  .menu {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    // margin-top: -15px;
+    // padding-top: 20px;
+    width: 100%;
+    // overflow-y: scroll;
+    // position: absolute;
+    top: 90px;
+    transition: all 0s ease-in-out;
+    max-width: 828px;
+    width: 96.5vw;
+    max-height: 70px;
+
+    display: flex;
+    align-items: center;
+    scrollbar-width: 0px;
+    padding: 0 10px !important;
+
+    .categories_h1 {
+      display: none;
+    }
+
+    h2 {
+      display: none;
+    }
+
+    ul {
+      display: flex;
+      gap: 10px;
+      // overflow-y: hidden;
+      // overflow-x: scroll;
+
+      li {
+        margin-bottom: 0;
+        border-radius: 16px;
+
+        &:hover {
+          background: none;
+        }
+        &.active {
+          background-color: #ececec;
+        }
+
+        a {
+          padding: 8px;
+        }
+      }
+    }
+
+    &.collapsed {
+      position: fixed;
+      top: 75px;
+      border-bottom-left-radius: 20px;
+      border-bottom-right-radius: 20px;
+      box-shadow: 0px 100px 100px 0px rgba(34, 60, 80, 0.2);
+    }
+  }
+}
+
+.menu::-webkit-scrollbar {
+  width: 0;
+}
