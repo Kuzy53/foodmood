@@ -1,0 +1,26 @@
+.card{
+    padding: 40px;
+    border-radius: 12px;
+}
+
+.card_outlined{
+    border: 1px solid var(--primary);
+}
+.card_filled{
+    background: var(--primary);
+    color: #fff;
+}
+.card_filled_black{
+    background: #25262B;
+    color: #fff;
+}
+.disc{
+    position: absolute;
+    top: -10px;
+    right: -30px;
+    transform: rotate(16deg);
+}
+.text{
+    font-size: 20px;
+    line-height: 1.3;
+}

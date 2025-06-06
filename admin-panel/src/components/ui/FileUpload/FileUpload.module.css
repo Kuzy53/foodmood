@@ -1,0 +1,32 @@
+.badge{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 12px;
+    font-weight: 500;
+    padding: 4px;
+    transform-origin: top;
+    border-radius: 4px;
+    box-shadow: 0 0 5px;
+    color: #333;
+    background: var(--primary);
+    backdrop-filter: blur(3px);
+    transition: .3s;
+}
+.wrp{
+    width: 160px;
+    aspect-ratio: 3/4;
+    &:hover{
+        .badge{
+            opacity: 0;
+        }
+    }
+}
+.image{
+    width: 100%;
+    height: 100%;
+    transform-origin: top;
+    object-position: top;
+    object-fit: cover;
+}

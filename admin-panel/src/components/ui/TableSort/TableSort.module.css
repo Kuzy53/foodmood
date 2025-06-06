@@ -1,0 +1,60 @@
+.th {
+    padding: 0;
+}
+
+.control {
+    width: 100%;
+    padding: var(--mantine-spacing-xs) var(--mantine-spacing-md);
+
+    @mixin hover {
+        background-color: light-dark(var(--mantine-color-gray-0), var(--mantine-color-dark-6));
+    }
+}
+
+.children {
+    transform-origin: right;
+    top: 0;
+    width: 0px;
+    overflow: hidden;
+    background: #fff;
+    height: 0px;
+    min-height: 300px;
+    flex-shrink: 0;
+    visibility: hidden;
+    opacity: 0;
+    padding: 20px;
+    border-left: 1px solid rgba(0, 0, 0, 0.13);
+    box-sizing: border-box;
+    transition: .5s;
+}
+
+.children.active {
+    width: 500px;
+    min-width: 320px;
+    opacity: 1;
+    height: auto;
+    visibility: visible;
+    position: relative;
+}
+
+.table {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    transition: .5s;
+    flex-shrink: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.13);
+    padding-top: 10px;
+    display: grid;
+    grid-template-columns: 1fr 0px;
+}
+
+.table.active {
+    grid-template-columns: 1fr 500px;
+}
+
+.icon {
+    width: rem(21px);
+    height: rem(21px);
+    border-radius: rem(21px);
+}

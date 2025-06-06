@@ -1,0 +1,67 @@
+.fileInput{
+    height: 100px;
+}
+.imageTitle{
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    color: white;
+    font-size: 36px;
+    transform: translateX(-50%);
+    transition: .4s ease-out;
+}
+.imageBox{
+    position: relative;
+    width: 768px;
+    margin: 0 auto;
+    height: 331px;
+    overflow: hidden;
+    &:before,&:after{
+        content: 'Desktop';
+        width: 25%;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        font-weight: 600;
+        justify-content: center;
+        text-align: center;
+        top: 0;
+        height: 100%;
+        background: rgba(255, 255, 255, 0.4);
+        backdrop-filter: blur(2px);
+        z-index: 1;
+        transition: .4s ease;
+    }
+    &:before{
+        right: 0;
+        border-left: 2px solid #fff;
+    }
+    &:after{
+        left: 0;
+        border-right: 2px solid #fff;
+    }
+    &:hover{
+        &:before{
+            transform: translateX(100%);
+            opacity: 0;
+        }
+        &:after{
+            transform: translateX(-100%);
+            opacity: 0;
+        }
+        .imageTitle{
+            opacity: 0;
+            transform: translateY(50px) translateX(-50%);
+        }
+    }
+}
+.imagePreview{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.qrCode{
+    width: 152px;
+    height: 152px;
+}
